@@ -1,0 +1,10 @@
+/**/.vs
+/**/.vscode
+
+/**/*.*~
+
+/build
+/output
+/libflatbuffers_ue4
+/samplers/*.h
+/samplers/*.cpp

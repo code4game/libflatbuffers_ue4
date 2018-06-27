@@ -1,0 +1,21 @@
+// Example IDL file for our monster's schema.
+
+namespace MyGame.Sample;
+
+enum Color:byte { Red = 0, Green, Blue = 2 }
+
+struct Vec3 {
+  x:float;
+  y:float;
+  z:float;
+}
+
+struct ErrorText {
+  code:short;
+}
+
+table Message {
+  name:string;
+}
+
+root_type Message;

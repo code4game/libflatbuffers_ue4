@@ -1,0 +1,41 @@
+// Example IDL file for our monster's schema.
+include "Equipment.fbs";
+
+namespace MyGame.Sample;
+
+enum WalkType:byte
+{
+  Run = 1,
+  Fly = 3,
+  Walk = 5,
+}
+
+struct Addition {
+  id:short;
+  index:long;
+}
+
+table Arm {
+  name:string;
+}
+
+/// Monster Data
+table Monster {
+  pos:Vec3;
+  mana:short = 150;
+  hp:short = 100;
+  name:string;
+  friendly:bool = false (deprecated);
+  inventory:[ubyte];
+  color:Color = Blue;
+  weapons:[Weapon];
+  equipped:Equipment;
+  colors:[Color];
+  walkType:WalkType = Walk;
+  arm:Arm;
+  speed:float;
+  cooldown:double;
+  wait:long;
+}
+
+root_type Monster;

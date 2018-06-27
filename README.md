@@ -1,1 +1,1 @@
-# libflatbuffers for UE4
+# FlatBuffers for UE4

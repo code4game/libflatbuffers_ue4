@@ -1,0 +1,18 @@
+// Example IDL file for our monster's schema.
+include "Common.fbs";
+
+namespace MyGame.Sample;
+
+union Equipment { Weapon, Magic } // Optionally add more tables.
+
+table Weapon {
+  name:string;
+  damage:short;
+}
+
+table Magic {
+  name:string;
+  count:short;
+}
+
+root_type Weapon;
